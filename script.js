@@ -28,14 +28,14 @@ function logKey(event) {
     keyPushed = `${event.code}`;
     console.log(`${keyPushed}`);
     if (keyPushed === "ArrowRight" && previousKeysPressed[0] === "START") {
-        // call nextCard
-        console.log("// call nextCardwith previous of START");   
-    }else if (keyPushed === "ArrowRight" && previousKeysPressed[0] === ("KeyY" || "KeyN")){
-        // call nextCard
+        // call nextCard to START
+        console.log("// call nextCard at START");   
+    }else if (keyPushed === "ArrowRight" && (previousKeysPressed[0] === ("KeyY" || "KeyN"))){
+        // call nextCard after 'Y' or 'N'
         console.log("// call nextCard with previous of KeyY || KeyN");
     }else if (keyPushed === "KeyA" && previousKeysPressed[0] === "ArrowRight"){
         // call showAnswer to flip card to show the answer
-        console.log("// call showAnswer to flip card to show the answer");
+        console.log("// call showAnswer to flip card and show the answer");
     }else if ((keyPushed === ("KeyY")) && previousKeysPressed[0] === "KeyA"){
         // call selfScoreCorrect
         console.log("// call selfScoreCorrect");
