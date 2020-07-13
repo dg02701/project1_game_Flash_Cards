@@ -27,16 +27,21 @@ function logKey(event) {
     console.log(previousKeysPressed + " inside logKey");
     keyPushed = `${event.code}`;
     console.log(`${keyPushed}`);
-    if ((keyPushed === "ArrowRight" && previousKeysPressed[0] === "START")
-        || (keyPushed === "ArrowRight" && previousKeysPressed[0] === ("KeyY" || "KeyN"))){
+    if (keyPushed === "ArrowRight" && previousKeysPressed[0] === "START") {
         // call nextCard
-        console.log("// call nextCard");
+        console.log("// call nextCardwith previous of START");   
+    }else if (keyPushed === "ArrowRight" && previousKeysPressed[0] === ("KeyY" || "KeyN")){
+        // call nextCard
+        console.log("// call nextCard with previous of KeyY || KeyN");
     }else if (keyPushed === "KeyA" && previousKeysPressed[0] === "ArrowRight"){
         // call showAnswer to flip card to show the answer
         console.log("// call showAnswer to flip card to show the answer");
-    }else if ((keyPushed === ("KeyY" || "KeyN")) && previousKeysPressed[0] === "KeyA"){
-        // call selfScore
-        console.log("// call selfScore");
+    }else if ((keyPushed === ("KeyY")) && previousKeysPressed[0] === "KeyA"){
+        // call selfScoreCorrect
+        console.log("// call selfScoreCorrect");
+    }else if (keyPushed === ("KeyN") && previousKeysPressed[0] === "KeyA"){
+        // call selfScoreWrong
+        console.log("// call selfScoreWrong");
     }else {
         // call invalidKeyPressed - is a 'validKey' flag needed?
         // look at what was previously pressed and give suggestions
