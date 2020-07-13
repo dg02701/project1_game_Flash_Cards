@@ -27,21 +27,21 @@ function logKey(event) {
     console.log(previousKeysPressed + " inside logKey");
     keyPushed = `${event.code}`;
     console.log(`${keyPushed}`);
-    if (){
-        // if invalid key pressed, look at what was previously pressed and give suggestions
+    if ((keyPushed === "ArrowRight" && previousKeysPressed[0] === "START")
+        || (keyPushed === "ArrowRight" && previousKeysPressed[0] === ("KeyY" || "KeyN"))){
+        // call nextCard
+        console.log("ready to go to next card");
+    }else if (keyPushed === "KeyA" && previousKeysPressed[0] === "ArrowRight"){
+        // call showAnswer to flip card to show the answer
+    }else if ((keyPushed === ("KeyY" || "KeyN")) && previousKeysPressed[0] === "KeyA"){
+        // call selfScore
     }else {
-        // set valid key flag
-    }
-        if ((keyPushed === "ArrowRight" && previousKeysPressed[0] === "START")
-            || (keyPushed === "ArrowRight" && previousKeysPressed[0] === ("KeyY" || "KeyN"))){
-            // go to NEXT CARD
-            console.log("ready to go to next card");
-        }else if (keyPushed === "KeyA" && previousKeysPressed[0] === "ArrowRight"){
-            // flib card to show the answer
-        }
+        // call invalidKeyPressed - is a 'validKey' flag needed?
+        // look at what was previously pressed and give suggestions
+    };
 
-        }
-}
+};
+
 // document.querySelector(".cardFront", "#5").innerText = keyPushed;
 // newP.innerText = defaultQuote.author;   //? maybe author.value
 document.addEventListener('keydown', logKey)
