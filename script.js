@@ -42,6 +42,8 @@ function logKey(event) {
         // look at what was previously pressed and give suggestions
         console.log("// call invalidKeyPressed");
     };
+    previousKeysPressed.unshift(`${keyPushed}`);
+    console.log(previousKeysPressed);
 
 };
 
