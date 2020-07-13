@@ -30,14 +30,17 @@ function logKey(event) {
     if ((keyPushed === "ArrowRight" && previousKeysPressed[0] === "START")
         || (keyPushed === "ArrowRight" && previousKeysPressed[0] === ("KeyY" || "KeyN"))){
         // call nextCard
-        console.log("ready to go to next card");
+        console.log("// call nextCard");
     }else if (keyPushed === "KeyA" && previousKeysPressed[0] === "ArrowRight"){
         // call showAnswer to flip card to show the answer
+        console.log("// call showAnswer to flip card to show the answer");
     }else if ((keyPushed === ("KeyY" || "KeyN")) && previousKeysPressed[0] === "KeyA"){
         // call selfScore
+        console.log("// call selfScore");
     }else {
         // call invalidKeyPressed - is a 'validKey' flag needed?
         // look at what was previously pressed and give suggestions
+        console.log("// call invalidKeyPressed");
     };
 
 };
