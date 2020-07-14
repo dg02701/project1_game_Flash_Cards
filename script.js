@@ -62,21 +62,22 @@ function nextCard(){
     let cardFront = document.querySelector("#cardFront");
     cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
     counter = counter + 1;
-    if (counter >= flashCards.length){
+    let mainDeckFinished = false;
+    if (counter === flashCards.length){
         console.log("That was the last new card in deck!");
-        // let msg = 
-        if (cardsToReview[0].prompt === "EMPTY"){
-            document.removeEventListener('keydown', logKey); 
-        }else{
-            //shift to get top card in stack
-            let cardFront = document.querySelector("#cardFront");
-            
-            cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
-        };
+        mainDeckFinished = true;
+    };
+    if (mainDeckFinished && (cardsToReview[0].prompt === "EMPTY")) {
+        document.removeEventListener('keydown', logKey); 
+    }else if(mainDeckFinished && (cardsToReview[0].prompt !== "EMPTY")) {
+        console.log("Still more to go!");
+        let cardFront = document.querySelector("#cardFront");   
+        cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
+    };
+
+};
         
         //  display msg in <div> 4 on last card and how to reset.
-    };
-};
 function showAnswer(){
     let cardBack = document.querySelector("#cardBack");
     cardBack.innerText = ('\r\n' + "- " + flashCards[counter-1].author);
@@ -96,6 +97,8 @@ function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your
     // let y = flashCards[counter].quote; 
     // let z = flashCards[counter].author; 
     cardsToReview.unshift(card);
+    let cardFront = document.querySelector("#cardFront")
+    cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
     console.log(cardsToReview);
 
     // cardsToReview[scoreWrong].prompt = flashCards[counter].prompt;
@@ -212,14 +215,7 @@ function logKey(event) {
     console.log(previousKeysPressed);
 
 };
-// document.querySelector(".cardFront", "#5").innerText = keyPushed;
-// newP.innerText = defaultQuote.author;   //? maybe author.value
 
 document.addEventListener('keydown', logKey);
 
-    
-// need to add checkWrongStack
-
-// document.addEventListener('keydown', logKey)
-// console.log(cardFront.innerText);
-console.log("bottom of js, awaiting player");
+console.log("bottom of js, awaiting player to start");
