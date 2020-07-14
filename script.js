@@ -20,27 +20,28 @@ const flashCards = [
         prompt:"2-Who said?",
         quote:"2-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
         author:"2-Winston Churchill"
-    },
-    {
-        prompt:"3-Who said?",
-        quote:"3-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"3-Winston Churchill"
-    },
-    {
-        prompt:"4-Who said?",
-        quote:"4-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"4-Winston Churchill"
-    },
-    {
-        prompt:"5-Who said?",
-        quote:"5-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"5-Winston Churchill"
-    },
-    {
-        prompt:"6-Who said?",
-        quote:"6-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"6-Winston Churchill"
     }
+    // ,
+    // {
+    //     prompt:"3-Who said?",
+    //     quote:"3-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"3-Winston Churchill"
+    // },
+    // {
+    //     prompt:"4-Who said?",
+    //     quote:"4-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"4-Winston Churchill"
+    // },
+    // {
+    //     prompt:"5-Who said?",
+    //     quote:"5-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"5-Winston Churchill"
+    // },
+    // {
+    //     prompt:"6-Who said?",
+    //     quote:"6-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"6-Winston Churchill"
+    // }
 ];
 console.log(Array.isArray(flashCards));
 // console.log(flashCards[0].prompt);
@@ -61,7 +62,11 @@ function nextCard(){
     let cardBack = document.querySelector("#cardBack");
     cardBack.innerText = ("");  
     if (counter === flashCards.length){
-        console.log("That was the last new card in deck!");
+        let msg = document.querySelector("#div4");
+        msg.innerText = ("That was the last new card in deck!" + '\r\n' + 
+        "Your FINAL score is  " + scoreCorrect + " correct out of " + cardsPlayed + " played." + '\r\n'
+        + '\r\n' + "Below are your review cards.  Press any key to review each"
+        );
         mainDeckFinished = true;
     }else {
         //display new promt and question
@@ -72,15 +77,27 @@ function nextCard(){
         // counter = counter + 1;
     };
     if (mainDeckFinished && (cardsToReview[0].prompt === "EMPTY")) {
-        conslog.log("removeEventListener ln 76");
+        conslog.log("removeEventListener ln 78");
         document.removeEventListener('keydown', logKey); 
     }else if(mainDeckFinished && (cardsToReview[0].prompt !== "EMPTY")) {
         console.log("78Still more to go!  There are " + cardsToReview.length + " to review.");
+        review();
+    };
+};     
+function review(){
+    let i = 0;
+    while (cardsToReview[0].prompt !== "EMPTY" && i < 100){
         let front = document.querySelector("#cardFront"); 
         console.log("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote); 
         front.innerText = ("REVIEW " + '\r\n' + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
+        let cardBack = document.querySelector("#cardBack");
+        cardBack.innerText = ('\r\n' + "- " + cardsToReview[0].author);
+        i += 1;   //just in case
     };
-};      
+    console.log("removeEventListener ln 91");
+    document.removeEventListener('keydown', logKey); 
+    //call finish()
+};
         //  display msg in <div> 4 on last card and how to reset.
 function showAnswer(){
     let cardBack = document.querySelector("#cardBack");
