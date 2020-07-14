@@ -1,7 +1,7 @@
 const previousKeysPressed = new Array();
 previousKeysPressed[0] = "START"
 console.log(previousKeysPressed + " GLOBAL");
-let counter = 0;  // GLOBAL counter for working through flashCard deck
+let counter = -1  // GLOBAL counter for working through flashCard deck
 console.log("counter initialized " + counter);
 let scoreCorrect = 0;  //GLOBAL score - the count of flashcards self-scored correct (Y)
 let scoreWrong = 0;     ////GLOBAL Wrongs - the count of flashcards self-scored wrong (N)
@@ -15,32 +15,34 @@ const flashCards = [
         prompt:"1-Who said?",
         quote:"1-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
         author:"1-Winston Churchill"
-    },
-    {
-        prompt:"2-Who said?",
-        quote:"2-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"2-Winston Churchill"
-    },
-    {
-        prompt:"3-Who said?",
-        quote:"3-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"3-Winston Churchill"
-    },
-    {
-        prompt:"4-Who said?",
-        quote:"4-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"4-Winston Churchill"
-    },
-    {
-        prompt:"5-Who said?",
-        quote:"5-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"5-Winston Churchill"
-    },
-    {
-        prompt:"6-Who said?",
-        quote:"6-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"6-Winston Churchill"
-    }];
+    }
+    // ,
+    // {
+    //     prompt:"2-Who said?",
+    //     quote:"2-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"2-Winston Churchill"
+    // },
+    // {
+    //     prompt:"3-Who said?",
+    //     quote:"3-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"3-Winston Churchill"
+    // },
+    // {
+    //     prompt:"4-Who said?",
+    //     quote:"4-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"4-Winston Churchill"
+    // },
+    // {
+    //     prompt:"5-Who said?",
+    //     quote:"5-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"5-Winston Churchill"
+    // },
+    // {
+    //     prompt:"6-Who said?",
+    //     quote:"6-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    //     author:"6-Winston Churchill"
+    // }
+];
 console.log(Array.isArray(flashCards));
 // console.log(flashCards[0].prompt);
 // console.log(flashCards[0].quote);
@@ -48,8 +50,8 @@ console.log(Array.isArray(flashCards));
 const cardsToReview = [     //initialize array for stack of missed (wrong - N) cards to review
     {
         prompt:"EMPTY",
-        quote:"",
-        author:""
+        quote:"EMPTY",
+        author:"EMPTY"
     }];
 console.log(Array.isArray(cardsToReview));
 function nextCard(){
@@ -60,8 +62,10 @@ function nextCard(){
     cardBack.innerText = ("");  
     //display new promt and question
     let cardFront = document.querySelector("#cardFront");
-    cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
     counter = counter + 1;
+    console.log(flashCards, counter);
+    cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
+    // counter = counter + 1;
     let mainDeckFinished = false;
     if (counter === flashCards.length){
         console.log("That was the last new card in deck!");
@@ -70,7 +74,7 @@ function nextCard(){
     if (mainDeckFinished && (cardsToReview[0].prompt === "EMPTY")) {
         document.removeEventListener('keydown', logKey); 
     }else if(mainDeckFinished && (cardsToReview[0].prompt !== "EMPTY")) {
-        console.log("Still more to go!");
+        console.log("Still more to go!  There are " + cardsToReview.length + " to review.");
         let cardFront = document.querySelector("#cardFront");   
         cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
     };
@@ -80,7 +84,7 @@ function nextCard(){
         //  display msg in <div> 4 on last card and how to reset.
 function showAnswer(){
     let cardBack = document.querySelector("#cardBack");
-    cardBack.innerText = ('\r\n' + "- " + flashCards[counter-1].author);
+    cardBack.innerText = ('\r\n' + "- " + flashCards[counter].author);
 };
 function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your answer correct?"
     scoreCorrect += 1;
@@ -93,13 +97,14 @@ function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your
 function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your answer correct?"
     console.log("Cards in review stack BEFORE adding this card:  " + scoreWrong);
     let card = flashCards[counter];
+    console.log("counter in selfScoreWrong " + counter);
     // let x = flashCards[counter].prompt;
     // let y = flashCards[counter].quote; 
     // let z = flashCards[counter].author; 
     cardsToReview.unshift(card);
     let cardFront = document.querySelector("#cardFront")
     cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
-    console.log(cardsToReview);
+    console.log("cardsToReview", cardsToReview);
 
     // cardsToReview[scoreWrong].prompt = flashCards[counter].prompt;
     // cardsToReview[scoreWrong].quote = flashCards[counter].quote; 
@@ -109,14 +114,10 @@ function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your
     let score = document.querySelector("#div4");
     scoreWrong += 1;    //?take out and use .length instead?
     score.innerText = ("Your score is  " + scoreCorrect + " correct out of " + counter + " played.");
-    reviewStack = ('\r\n' + "Cards to review stack AFTER adding this card:  " + scoreWrong);
+    reviewStack = ('\r\n' + "Cards to review:  " + scoreWrong);
     score.innerText += reviewStack;
-    console.log('\r\n' + "Cards in review stack AFTER adding this card:  " + scoreWrong);
-
-    
+    console.log('\r\n' + "Cards to review:  " + scoreWrong);
 };
-
-
 function invalidKeyPressed(key, preKey){
     let validKey = false;
     console.log("key argument - " + key);
