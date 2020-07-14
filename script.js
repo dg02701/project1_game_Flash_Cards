@@ -43,8 +43,8 @@ const flashCards = [
     // }];
     }];   // takeout when uncomment Q 3-6.
 console.log(Array.isArray(flashCards));
-console.log(flashCards[0].prompt);
-console.log(flashCards[0].quote);
+// console.log(flashCards[0].prompt);
+// console.log(flashCards[0].quote);
 
 const cardsToReview = [     //initialize array for stack of missed (wrong - N) cards to review
     {
@@ -52,7 +52,7 @@ const cardsToReview = [     //initialize array for stack of missed (wrong - N) c
         quote:"",
         author:""
     }];
-
+console.log(Array.isArray(cardsToReview));
 function nextCard(){
     console.log("in nextCard, counter starts as: = " + counter);
     console.log("flashCards.length= " + flashCards.length);
@@ -71,7 +71,8 @@ function nextCard(){
         }else{
             //shift to get top card in stack
             let cardFront = document.querySelector("#cardFront");
-            cardFront.innerText = (flashCards[0].prompt + '\r\n' + '\r\n' + flashCards[0].quote);
+            
+            cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
         };
         
         //  display msg in <div> 4 on last card and how to reset.
@@ -83,7 +84,8 @@ function showAnswer(){
 };
 function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your answer correct?"
     scoreCorrect += 1;
-    cardsPlayed = counter + 1;
+    // cardsPlayed = counter + 1;
+    cardsPlayed = counter;
     console.log(scoreCorrect);
     let score = document.querySelector("#div4");
     score.innerText = ("Your score is  " + scoreCorrect + " correct out of " + cardsPlayed + " played.");
@@ -94,8 +96,13 @@ function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your
     cardsToReview[scoreWrong].quote = flashCards[counter].quote; 
     cardsToReview[scoreWrong].author = flashCards[counter].author; 
     console.log(cardsToReview[scoreWrong]);
-    scoreWrong += 1;
-    console.log("Cards in review stack AFTER adding this card:  " + scoreWrong);
+    let score = document.querySelector("#div4");
+    scoreWrong += 1;    //?take out and use .length instead?
+    reviewStack = ('\r\n' + "Cards now in review stack AFTER adding this card:  " + scoreWrong);
+    score.innerText += reviewStack;
+    console.log('\r\n' + "Cards in review stack AFTER adding this card:  " + scoreWrong);
+
+    
 };
 
 
@@ -207,4 +214,4 @@ document.addEventListener('keydown', logKey);
 
 // document.addEventListener('keydown', logKey)
 // console.log(cardFront.innerText);
-console.log("prettier");
+console.log("bottom of js, awaiting player");
