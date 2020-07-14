@@ -7,41 +7,40 @@ let scoreCorrect = 0;  //GLOBAL score - the count of flashcards self-scored corr
 let scoreWrong = 0;     ////GLOBAL Wrongs - the count of flashcards self-scored wrong (N)
 const flashCards = [
     {
-        prompt:"Who said?",
-        quote:"0Whether you think you can or think you can’t, you’re right.",
-        author:"Henry Ford"
+        prompt:"0-Who said?",
+        quote:"0-Whether you think you can or think you can’t, you’re right.",
+        author:"0-Henry Ford"
     },
     {
-        prompt:"Who said?",
-        quote:"1The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"Winston Churchill"
+        prompt:"1-Who said?",
+        quote:"1-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        author:"1-Winston Churchill"
     },
     {
-        prompt:"Who said?",
-        quote:"2The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-        author:"Winston Churchill"
-    // },
-    // {
-    //     prompt:"Who said?",
-    //     quote:"3The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-    //     author:"Winston Churchill"
-    // },
-    // {
-    //     prompt:"Who said?",
-    //     quote:"4The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-    //     author:"Winston Churchill"
-    // },
-    // {
-    //     prompt:"Who said?",
-    //     quote:"5The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-    //     author:"Winston Churchill"
-    // },
-    // {
-    //     prompt:"Who said?",
-    //     quote:"6The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
-    //     author:"Winston Churchill"
-    // }];
-    }];   // takeout when uncomment Q 3-6.
+        prompt:"2-Who said?",
+        quote:"2-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        author:"2-Winston Churchill"
+    },
+    {
+        prompt:"3-Who said?",
+        quote:"3-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        author:"3-Winston Churchill"
+    },
+    {
+        prompt:"4-Who said?",
+        quote:"4-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        author:"4-Winston Churchill"
+    },
+    {
+        prompt:"5-Who said?",
+        quote:"5-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        author:"5-Winston Churchill"
+    },
+    {
+        prompt:"6-Who said?",
+        quote:"6-The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+        author:"6-Winston Churchill"
+    }];
 console.log(Array.isArray(flashCards));
 // console.log(flashCards[0].prompt);
 // console.log(flashCards[0].quote);
@@ -80,7 +79,7 @@ function nextCard(){
 };
 function showAnswer(){
     let cardBack = document.querySelector("#cardBack");
-    cardBack.innerText = ('\r\n' + "- " + flashCards[counter].author);
+    cardBack.innerText = ('\r\n' + "- " + flashCards[counter-1].author);
 };
 function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your answer correct?"
     scoreCorrect += 1;
@@ -92,13 +91,22 @@ function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your
 };
 function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your answer correct?"
     console.log("Cards in review stack BEFORE adding this card:  " + scoreWrong);
-    cardsToReview[scoreWrong].prompt = flashCards[counter].prompt;
-    cardsToReview[scoreWrong].quote = flashCards[counter].quote; 
-    cardsToReview[scoreWrong].author = flashCards[counter].author; 
-    console.log(cardsToReview[scoreWrong]);
+    let card = flashCards[counter];
+    // let x = flashCards[counter].prompt;
+    // let y = flashCards[counter].quote; 
+    // let z = flashCards[counter].author; 
+    cardsToReview.unshift(card);
+    console.log(cardsToReview);
+
+    // cardsToReview[scoreWrong].prompt = flashCards[counter].prompt;
+    // cardsToReview[scoreWrong].quote = flashCards[counter].quote; 
+    // cardsToReview[scoreWrong].author = flashCards[counter].author; 
+
+    console.log(cardsToReview[0]);
     let score = document.querySelector("#div4");
     scoreWrong += 1;    //?take out and use .length instead?
-    reviewStack = ('\r\n' + "Cards now in review stack AFTER adding this card:  " + scoreWrong);
+    score.innerText = ("Your score is  " + scoreCorrect + " correct out of " + counter + " played.");
+    reviewStack = ('\r\n' + "Cards to review stack AFTER adding this card:  " + scoreWrong);
     score.innerText += reviewStack;
     console.log('\r\n' + "Cards in review stack AFTER adding this card:  " + scoreWrong);
 
