@@ -3,6 +3,8 @@ previousKeysPressed[0] = "START"
 console.log(previousKeysPressed + " GLOBAL");
 let counter = 0;  // GLOBAL counter for working through flashCard deck
 console.log("counter initialized " + counter);
+let scoreCorrect = 0;  //GLOBAL score - the count of flashcards self-scored correct (Y)
+let scoreWrong = 0;     ////GLOBAL Wrongs - the count of flashcards self-scored wrong (N)
 
 const flashCards = [
     {
@@ -45,9 +47,20 @@ console.log(Array.isArray(flashCards));
 console.log(flashCards[0].prompt);
 console.log(flashCards[0].quote);
 
-function nextCard (){
+const cardsToReview = [
+    {
+        prompt:"",
+        quote:"",
+        author:""
+    }];
+
+function nextCard(){
     console.log("in nextCard, counter starts as: = " + counter);
     console.log("flashCards.length= " + flashCards.length);
+    //blank previous answer (back) before new question (front) is shown
+    let cardBack = document.querySelector("#cardBack");
+    cardBack.innerText = ("");  
+    //display new promt and question
     let cardFront = document.querySelector("#cardFront");
     cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
     counter = counter + 1;
@@ -57,6 +70,25 @@ function nextCard (){
         //  display msg in <div> 4 on last card and how to reset.
     };
 };
+
+function showAnswer(){
+    let cardBack = document.querySelector("#cardBack");
+    cardBack.innerText = ('\r\n' + "- " + flashCards[counter].author);
+};
+function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your answer correct?"
+    scoreCorrect += 1;
+    console.log(scoreCorrect);
+};
+function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your answer correct?"
+    console.log("Cards in review stack BEFORE adding this card:  " + scoreWrong);
+    cardsToReview[scoreWrong].prompt = flashCards[counter].prompt;
+    cardsToReview[scoreWrong].quote = flashCards[counter].quote; 
+    cardsToReview[scoreWrong].author = flashCards[counter].author; 
+    console.log(cardsToReview[scoreWrong]);
+    scoreWrong += 1;
+    console.log("Cards in review stack AFTER adding this card:  " + scoreWrong);
+};
+
 
 function invalidKeyPressed(key, preKey){
     let validKey = false;
@@ -136,12 +168,15 @@ function logKey(event) {
         console.log("// call nextCard with previous of KeyN");
     }else if (keyPushed === "KeyA" && previousKeysPressed[0] === "ArrowRight"){
         // call showAnswer to flip card to show the answer
+        showAnswer();
         console.log("// call showAnswer to flip card and show the answer");
     }else if ((keyPushed === ("KeyY")) && previousKeysPressed[0] === "KeyA"){
         // call selfScoreCorrect
+        selfScoreCorrect();
         console.log("// call selfScoreCorrect");
     }else if (keyPushed === ("KeyN") && previousKeysPressed[0] === "KeyA"){
         // call selfScoreWrong
+        selfScoreWrong();
         console.log("// call selfScoreWrong");
     }else {
         // call invalidKeyPressed - is a 'validKey' flag needed?
