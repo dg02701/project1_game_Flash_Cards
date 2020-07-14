@@ -66,18 +66,21 @@ function nextCard(){
     counter = counter + 1;
     if (counter >= flashCards.length){
         console.log("That was the last card in deck!");
+        let msg = 
         document.removeEventListener('keydown', logKey); 
         //  display msg in <div> 4 on last card and how to reset.
     };
 };
-
 function showAnswer(){
     let cardBack = document.querySelector("#cardBack");
     cardBack.innerText = ('\r\n' + "- " + flashCards[counter].author);
 };
 function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your answer correct?"
     scoreCorrect += 1;
+    cardsPlayed = counter + 1;
     console.log(scoreCorrect);
+    let score = document.querySelector("#div4");
+    score.innerText = ("Your score is  " + scoreCorrect + " correct out of " + cardsPlayed + " played.");
 };
 function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your answer correct?"
     console.log("Cards in review stack BEFORE adding this card:  " + scoreWrong);

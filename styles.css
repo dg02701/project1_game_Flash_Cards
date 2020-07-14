@@ -1,7 +1,25 @@
+/* body{
+
+
+} */
+
+header {
+    color: black;
+    font-size: xx-large;
+    background-color: darkgray;
+    justify-content: center;
+}
+#div4 {             /*Score and msg div */
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    background-color: green
+}
 #cardFront {
+    color: black;
     background-color: aqua;
 }
 #cardBack {
-    background-color: blue;
     color: cornsilk;
+    background-color: blue;
 }
