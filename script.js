@@ -5,7 +5,6 @@ let counter = 0;  // GLOBAL counter for working through flashCard deck
 console.log("counter initialized " + counter);
 let scoreCorrect = 0;  //GLOBAL score - the count of flashcards self-scored correct (Y)
 let scoreWrong = 0;     ////GLOBAL Wrongs - the count of flashcards self-scored wrong (N)
-
 const flashCards = [
     {
         prompt:"Who said?",
@@ -47,9 +46,9 @@ console.log(Array.isArray(flashCards));
 console.log(flashCards[0].prompt);
 console.log(flashCards[0].quote);
 
-const cardsToReview = [
+const cardsToReview = [     //initialize array for stack of missed (wrong - N) cards to review
     {
-        prompt:"",
+        prompt:"EMPTY",
         quote:"",
         author:""
     }];
@@ -65,9 +64,16 @@ function nextCard(){
     cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
     counter = counter + 1;
     if (counter >= flashCards.length){
-        console.log("That was the last card in deck!");
-        let msg = 
-        document.removeEventListener('keydown', logKey); 
+        console.log("That was the last new card in deck!");
+        // let msg = 
+        if (cardsToReview[0].prompt === "EMPTY"){
+            document.removeEventListener('keydown', logKey); 
+        }else{
+            //shift to get top card in stack
+            let cardFront = document.querySelector("#cardFront");
+            cardFront.innerText = (flashCards[0].prompt + '\r\n' + '\r\n' + flashCards[0].quote);
+        };
+        
         //  display msg in <div> 4 on last card and how to reset.
     };
 };
