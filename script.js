@@ -49,10 +49,7 @@ function nextCard (){
     console.log("in nextCard, counter starts as: = " + counter);
     console.log("flashCards.length= " + flashCards.length);
     let cardFront = document.querySelector("#cardFront");
-    // cardFront.innerText = flashCards[counter].prompt; 
     cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
-    // cardFront.innerText = flashCards[counter].quote;
-    // cardFront.textContent += flashCards[counter].quote;
     counter = counter + 1;
     if (counter >= flashCards.length){
         console.log("That was the last card in deck!");
