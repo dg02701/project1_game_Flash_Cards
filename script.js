@@ -396,13 +396,11 @@ function logKey(event) {
 document.addEventListener('keydown', logKey);
 
 console.log("bottom of js, awaiting player to start");
-let msg = document.querySelector("#div4");
-msg.innerText = ("Welcome to Flashcard Fun!  Here is how you play." + '\r\n' + 
-"Use keyboard only.   Here are the keys to use:" + '\r\n' + 
-"ArrowRight (very bottom right of keyboard) gets next card." + '\r\n' + 
+let msg = document.querySelector("#div3");
+msg.innerText = ("ArrowRight (very bottom right of keyboard) gets next card." + '\r\n' + 
 "'A' shows card back and answer." + '\r\n' + 
 "'Y' records your self-score that 'Yes', you had the correct answer" + '\r\n' + 
 "'N' records your self-score that 'No', you did not have the correct answer" + '\r\n' +
-" After you select Y or N, use ArrowRight to get the next card." + '\r\n' + '\r\n' +
-"Now hit that arrow and let's start!"
+" After you select Y or N, use ArrowRight to get the next card."
 );
+

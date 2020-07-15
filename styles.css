@@ -1,29 +1,58 @@
 body{
+    background-image: url(image_flashcards.png);
     background-color: grey;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
-
 header {
+    text-align: center;
     color: black;
-    font-size: xx-large;
+    font-size: 50pt;
     background-color: darkgray;
-    justify-content: center;
+    align-content: center;
+    margin: 5pt;
+    margin-left: 100pt;
+    margin-right: 100pt;
 }
-#div4 {             /*Score and msg div */
+/* .screenboxes{
+    display: flex;  
+    flex-wrap: wrap;
+    background-color: darkkhaki;
+    margin: 5pt;
+} */
+.screenboxes {             /*Score and msg div */
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
     font-size: larger;
     font-weight: bold;
-    background-color: rgb(120, 180, 120)
+    background-color: rgb(120, 180, 120);
+    margin: 5pt;
+}
+#div4 {
+    color:black;
+    background-color: chocolate;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 #cardFront {
+    display: flex;
+    justify-content: left;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+    font-weight: bold;
     background-color: aqua;
 }
 #cardBack {
+    display: flex;
+    justify-content: flex-end;
     color: cornsilk;
+    font-family: cursive;
+    font-size: 30pt;
     background-color: blue;
 }
