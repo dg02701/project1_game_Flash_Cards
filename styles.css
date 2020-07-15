@@ -27,18 +27,31 @@ header {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    font-size: larger;
+    font-size: 20pt;
     font-weight: bold;
     background-color: rgb(120, 180, 120);
     margin: 5pt;
 }
 #div4 {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
     color:black;
+    font-size: 20pt;
     background-color: chocolate;
     text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    /* margin-left: 30%;
+    margin-right: 30%; */
 }
+#div5 {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    color:white;
+    font-size: 50pt;
+    background-color: #F77F00;
+    text-align: center;
+}    
 #cardFront {
     display: flex;
     justify-content: left;
@@ -46,11 +59,16 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25pt;
     font-weight: bold;
-    background-color: aqua;
+    /* background-color: aqua; */
+    background-color: whitesmoke;
+    border-width: medium;
+    border: black;
 }
 #cardBack {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    justify-self: center;
+    width: 50%;
     color: cornsilk;
     font-family: cursive;
     font-size: 30pt;

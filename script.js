@@ -25,162 +25,163 @@ const flashCards = [
         prompt:"Who said?",
         quote:"When you reach the end of your rope, tie a knot in it and hang on.",
         author:"Franklin D. Roosevelt"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Don't judge each day by the harvest you reap but by the seeds that you plant.",
-        author:"Robert Louis Stevenson"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Always remember that you are absolutely unique. Just like everyone else.",
-        author:"Margaret Mead"
-    },
-    {
-        prompt:"Who said?",
-        quote:"The future belongs to those who believe in the beauty of their dreams.",
-        author:"Eleanor Roosevelt"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Tell me and I forget. Teach me and I remember. Involve me and I learn.",
-        author:"Benjamin Franklin"
-    },
-    {
-        prompt:"Who said?",
-        quote:"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
-        author:"Helen Keller"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Whoever is happy will make others happy too.",
-        author:"Anne Frank"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Do not go where the path may lead, go instead where there is no path and leave a trail.",
-        author:"Ralph Waldo Emerson"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Spread love everywhere you go. Let no one ever come to you without leaving happier.",
-        author:"Mother Teresa"
-    },
-    {
-        prompt:"Who said?",
-        quote:"The greatest glory in living lies not in never falling, but in rising every time we fall.",
-        author:"Nelson Mandela"
-    },
-    {
-        prompt:"Who said?",
-        quote:"In the end, it's not the years in your life that count. It's the life in your years.",
-        author:"Abraham Lincoln"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Never let the fear of striking out keep you from playing the game.",
-        author:"Babe Ruth"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Life is either a daring adventure or nothing at all.",
-        author:"Helen Keller"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Many of life's failures are people who did not realize how close they were to success when they gave up.",
-        author:"Thomas Alva Edison"
-    },
-    {
-        prompt:"Who said?",
-        quote:"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
-        author:"Dr. Seuss"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Only a life lived for others is a life worthwhile.",
-        author:"Albert Einstein"
-    },
-    {
-        prompt:"Who said?",
-        quote:"You only live once, but if you do it right, once is enough.",
-        author:"Mae West"
-    },
-    {
-        prompt:"Who said?",
-        quote:"May you live all the days of your life.",
-        author:"Jonathan Swift"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Life itself is the most wonderful fairy tale.",
-        author:"Hans Christian Andersen"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Do not let making a living prevent you from making a life.",
-        author:"John Wooden"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Love the life you live. Live the life you love.",
-        author:"Bob Marley"
-    },
-    {
-        prompt:"Who said?",
-        quote:"I failed my way to success.",
-        author:"Thomas Edison"
-    },
-    {
-        prompt:"Who said?",
-        quote:"The only place where success comes before work is in the dictionary.",
-        author:"Vidal Sassoon"
-    },
-    {
-        prompt:"Who said?",
-        quote:"You miss 100% of the shots you don't take.",
-        author:"Wayne Gretzky"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Nothing is impossible, the word itself says, ‘I'm possible!'",
-        author:"Audrey Hepburn"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Believe you can and you're halfway there.",
-        author:"Theodore Roosevelt"
-    },
-    {
-        prompt:"Who said?",
-        quote:"The question isn't who is going to let me; it's who is going to stop me.",
-        author:"Ayn Rand"
-    },
-    {
-        prompt:"Who said?",
-        quote:"If you tell the truth, you don't have to remember anything.",
-        author:"Mark Twain"
-    },
-    {
-        prompt:"Who said?",
-        quote:"Truth is like the sun. You can shut it out for a time, but it ain't goin' away.",
-        author:"Elvis Presley"
-    },
-    {
-        prompt:"Who said?",
-        quote:"You can observe a lot by just watching.",
-        author:"Yogi Berra"
-    },
-    {
-        prompt:"Who said?",
-        quote:"All that glitters is not gold.",
-        author:"William Shakespeare"
-    },  
-    {
-        prompt:"Who said?",
-        quote:"Let the one among you who is without sin be the first to cast a stone.",
-        author:"Jesus Christ"
-    }   
+    }           //commented out rest of quotes to shorten demo
+    // ,
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Don't judge each day by the harvest you reap but by the seeds that you plant.",
+    //     author:"Robert Louis Stevenson"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Always remember that you are absolutely unique. Just like everyone else.",
+    //     author:"Margaret Mead"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"The future belongs to those who believe in the beauty of their dreams.",
+    //     author:"Eleanor Roosevelt"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    //     author:"Benjamin Franklin"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+    //     author:"Helen Keller"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Whoever is happy will make others happy too.",
+    //     author:"Anne Frank"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    //     author:"Ralph Waldo Emerson"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    //     author:"Mother Teresa"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    //     author:"Nelson Mandela"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"In the end, it's not the years in your life that count. It's the life in your years.",
+    //     author:"Abraham Lincoln"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Never let the fear of striking out keep you from playing the game.",
+    //     author:"Babe Ruth"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Life is either a daring adventure or nothing at all.",
+    //     author:"Helen Keller"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Many of life's failures are people who did not realize how close they were to success when they gave up.",
+    //     author:"Thomas Alva Edison"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+    //     author:"Dr. Seuss"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Only a life lived for others is a life worthwhile.",
+    //     author:"Albert Einstein"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"You only live once, but if you do it right, once is enough.",
+    //     author:"Mae West"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"May you live all the days of your life.",
+    //     author:"Jonathan Swift"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Life itself is the most wonderful fairy tale.",
+    //     author:"Hans Christian Andersen"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Do not let making a living prevent you from making a life.",
+    //     author:"John Wooden"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Love the life you live. Live the life you love.",
+    //     author:"Bob Marley"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"I failed my way to success.",
+    //     author:"Thomas Edison"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"The only place where success comes before work is in the dictionary.",
+    //     author:"Vidal Sassoon"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"You miss 100% of the shots you don't take.",
+    //     author:"Wayne Gretzky"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Nothing is impossible, the word itself says, ‘I'm possible!'",
+    //     author:"Audrey Hepburn"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Believe you can and you're halfway there.",
+    //     author:"Theodore Roosevelt"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"The question isn't who is going to let me; it's who is going to stop me.",
+    //     author:"Ayn Rand"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"If you tell the truth, you don't have to remember anything.",
+    //     author:"Mark Twain"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Truth is like the sun. You can shut it out for a time, but it ain't goin' away.",
+    //     author:"Elvis Presley"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"You can observe a lot by just watching.",
+    //     author:"Yogi Berra"
+    // },
+    // {
+    //     prompt:"Who said?",
+    //     quote:"All that glitters is not gold.",
+    //     author:"William Shakespeare"
+    // },  
+    // {
+    //     prompt:"Who said?",
+    //     quote:"Let the one among you who is without sin be the first to cast a stone.",
+    //     author:"Jesus Christ"
+    // }   
 ];
 // console.log(Array.isArray(flashCards));
 // console.log(flashCards[0].prompt);
@@ -241,11 +242,12 @@ function review(){
                 cardBack.innerText = ('\r\n' + "- " + cardsToReview[0].author);
                 cardsToReview.shift();
             }else {
-                let msg = document.querySelector("#div4");
-                msg.innerText = ("That was the last card to review!" + '\r\n' + 
+                let msg4 = document.querySelector("#div4");
+                msg4.innerText = ("That was the last card to review!" + '\r\n' + 
                 "Your FINAL score is  " + scoreCorrect + " correct out of a " + cardsPlayed + " card deck."
-                 + '\r\n' + '\r\n' + "Refresh the browser to go through the deck again."
                 );
+                let msg5 = document.querySelector("#div5");
+                msg5.innerText = ("Refresh the browser to go through the deck again.");
                 front.innerText = "";
                 cardBack.innerText = "";
             }
@@ -280,7 +282,8 @@ function selfScoreWrong(){      //when KeyN is pressed as response to, "Was your
     // let z = flashCards[counter].author; 
     cardsToReview.unshift(card);
     let cardFront = document.querySelector("#cardFront")
-    cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
+    // cardFront.innerText = ("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
+    cardFront.innerText = (cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
     // console.log("cardsToReview", cardsToReview);
     // cardsToReview[scoreWrong].prompt = flashCards[counter].prompt;
     // cardsToReview[scoreWrong].quote = flashCards[counter].quote; 
@@ -399,8 +402,8 @@ console.log("bottom of js, awaiting player to start");
 let msg = document.querySelector("#div3");
 msg.innerText = ("ArrowRight (very bottom right of keyboard) gets next card." + '\r\n' + 
 "'A' shows card back and answer." + '\r\n' + 
-"'Y' records your self-score that 'Yes', you had the correct answer" + '\r\n' + 
-"'N' records your self-score that 'No', you did not have the correct answer" + '\r\n' +
+"'Y' records your self-score that 'Yes', you had the correct answer." + '\r\n' + 
+"'N' records your self-score that 'No', you did not have the correct answer." + '\r\n' +
 " After you select Y or N, use ArrowRight to get the next card."
 );
 
