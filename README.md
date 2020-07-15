@@ -1,42 +1,42 @@
 # project1_game_Flash_Cards
-Started 20200710, Darryl Grissom  Project Lead - Marc
 
-GAME TYPE:  FLASH CARDS
-GAME NAME:  Flashcard Fun
+Started 20200710, Darryl Grissom Project Lead - Marc
+
+GAME TYPE: FLASH CARDS
+GAME NAME: Flashcard Fun
 
 DESCRIPTION
-This app is targeted to the home-education market for children K-4.  Flashcard Fun does not require parents to be techical.
-The game goes through a deck fo preloaded flashcards.  Each flashcard entry has 3 elements: prompt, quote, author.
+This app is targeted to the home-education market for children K-4. Flashcard Fun does not require parents to be techical.
+The game goes through a deck fo preloaded flashcards. Each flashcard entry has 3 elements: prompt, quote, author.
 NOTE: the pre-load is made up of quotes; however, this could be changed to mixed subjects or another single subject.
 Ex. preload -
 {
-    prompt:"Who said?",
-    quote:"May you live all the days of your life.",
-    author:"Jonathan Swift"
+prompt:"Who said?",
+quote:"May you live all the days of your life.",
+author:"Jonathan Swift"
 }
-ex. for math - 
+ex. for math -
 {
-    prompt:"What is",
-    quote:"4 + 3",
-    author:"7"
+prompt:"What is",
+quote:"4 + 3",
+author:"7"
 }
 The prompt and quote are on front of card (white box in middle of page) and author (answer) is on back of card in blue box.
 The game is self-scored.
 BASIC GAMEPLAY:
-Game is opened in browser
-Player (or parent) presses ArrowRight (very bottom right of keyboard) to get 1st card.
-Front of card shows in white box.
-Player thinks of answer to the prompt.
-Once player has answered verbaly to parent or to themselves, press Key "A" to reveal the correct answer in blue box (back of card).
-Player (or parent) presses key "Y" or key "N" to self-score the players answer.
-Score is updated in brown box in middle of screen.
-Play continues with next card by pressing ArrowRight and repeating A, Y or N, and then ArrowRight again.
-
+1.	Game is opened in browser
+2.	Player (or parent) presses ArrowRight (very bottom right of keyboard) to get 1st card.
+3.	Front of card shows in white box.
+4.	Player thinks of answer to the prompt.
+5.	Once player has answered verbaly to parent or to themselves, press Key "A" to reveal the correct answer in blue box (back of card).
+6.	Player (or parent) presses key "Y" or key "N" to self-score the players answer.
+7.	Score is updated in brown box in middle of screen.
+8.	Play continues with next card by pressing ArrowRight and repeating A, Y or N, and then ArrowRight again.
+9.	When the end of flashcard deck is reached, in brown box messages are displayed to say last card, final score, card to review and instructions for review
 
 
 USER REQUIREMENTS
 Pre-load your app with some data, and let the user flip through them quickly (back or front), and use the keyboard flip the card, and to mark whether they got it right or not. Track which cards were incorrect, and re-display them until the user gets them right!
-
 
 USER STORIES
 COMPLETE @MVP - I want data preloaded for a set of flashcards
@@ -45,14 +45,9 @@ COMPLETE @MVP - I want to be able to flip through the cards quickly (via keyboar
 COMPLETE @MVP - I want to be able to mark whether I got the card correct (via keyboard)
 COMPLETE @MVP - I want the app to track which cards were incorrect
 COMPLETE @MVP - I want the game to avoid various learning difference issues:  
-    ex. font of arial for most of display and avoid Courier New or other set-width fonts (helps people with dyslexia ).
-    ex. no continual flashing, blinking, movement (helps children with ADHD).
+ ex. font of arial for most of display and avoid Courier New or other set-width fonts (helps people with dyslexia ).
+ex. no continual flashing, blinking, movement (helps children with ADHD).
 I want the incorrect cards re-displayed until I get the right! (Reviewing multiple review cards still has bug)
 
 User Interviews:
-Interviewed two homeschooling moms.  Recieved feedback on keys selected for gameplay.  KeyA to show the answer was preferred over KeyF (for 'Flip).  This was even if graphics were to be put on to visually 'flip' the flashcards.
-
-
-
-
-
+Interviewed two homeschooling moms. Recieved feedback on keys selected for gameplay. KeyA to show the answer was preferred over KeyF (for 'Flip). This was even if graphics were to be put on to visually 'flip' the flashcards.
