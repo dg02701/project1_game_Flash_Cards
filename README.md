@@ -62,7 +62,13 @@ Written in Javascript with html and CSS file.  CSS file uses some flexbox.
 The javascript used was checked in documentation (ex. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) Chrome, Version 78.0.3904.87 (Official Build) (64-bit) on a Macbook Pro.
 
 VALIDATIONS:
+HTML5 Validator @ https://html5.validator.nu/ would not load for me.  However, Jason Wheeler was able to run validator on his machine. 
+Screenshot is loaded to my repo:  
+https://github.com/dg02701/project1_game_Flash_Cards/blob/master/HTML%20Validator%20-%20no%20errors.eml 
 
+CSS Validator @ https://jigsaw.w3.org/css-validator/ ran fine.  
+Screenshot is loaded to my repo:  
+https://github.com/dg02701/project1_game_Flash_Cards/blob/master/CSS%20validation%20-%20no%20errors.png 
 
 INSTALLATION INSTRUCTIONS / GETING STARTED
 This app was not designed with integration to other apps in mind. 
@@ -85,6 +91,9 @@ a.	Change element names for array flashCards so they make more sense for non-quo
 
 b.	Used ‘counter’ too much.  Need to clean up.
 
+CONTRIBUTIONS
+background picture: https://theantijunecleaver.com/kindergarten-diy-sight-word-flash-cards/ 
 
+Jason Wheeler: for running everyone's page through the HTML5 validator.
 
 
