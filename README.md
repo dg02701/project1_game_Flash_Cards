@@ -15,13 +15,14 @@ prompt:"Who said?",
 quote:"May you live all the days of your life.",
 author:"Jonathan Swift"
 }
-ex. for math -
+ex. for math:
 {
 prompt:"What is",
 quote:"4 + 3",
 author:"7"
 }
-The prompt and quote are on front of card (white box in middle of page) and author (answer) is on back of card in blue box.
+Here is exmample screen of the math card:  https://github.com/dg02701/project1_game_Flash_Cards/blob/master/Flashcard_Fun_example-screentshot.png
+The 'prompt' and 'quote' (the question) are on front of card (white box in middle of page) and 'author' (theanswer) is on back of card in blue box.
 The game is self-scored.
 BASIC GAMEPLAY:
 1.	Game is opened in browser
@@ -32,7 +33,7 @@ BASIC GAMEPLAY:
 6.	Player (or parent) presses key "Y" or key "N" to self-score the players answer.
 7.	Score is updated in brown box in middle of screen.
 8.	Play continues with next card by pressing ArrowRight and repeating A, Y or N, and then ArrowRight again.
-9.	When the end of flashcard deck is reached, in brown box messages are displayed to say last card, final score, card to review and instructions for review
+9.	When the end of flashcard deck is reached, in brown box messages are displayed to say last card, final score, card to review and instructions for review.  Ex. end-of-deck screen: https://github.com/dg02701/project1_game_Flash_Cards/blob/master/Flashcard_Fun_end-of-deck_screensot.png
 
 
 USER REQUIREMENTS
@@ -49,5 +50,10 @@ COMPLETE @MVP - I want the game to avoid various learning difference issues:
 ex. no continual flashing, blinking, movement (helps children with ADHD).
 I want the incorrect cards re-displayed until I get the right! (Reviewing multiple review cards still has bug)
 
-User Interviews:
-Interviewed two homeschooling moms. Recieved feedback on keys selected for gameplay. KeyA to show the answer was preferred over KeyF (for 'Flip). This was even if graphics were to be put on to visually 'flip' the flashcards.
+USER INTERVIEWS/HANDS-ON DEMOS:
+Interviewed two homeschooling moms. Recieved feedback on keys selected for gameplay. KeyA to show the answer was preferred over KeyF (for 'Flip). This was even if graphics were to be put in to visually 'flip' the flashcards.
+
+LIST OF TECHNOLOGIES USED:
+Written in Javascript with html and CSS file.  CSS file uses some flexbox.
+
+
