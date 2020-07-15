@@ -61,6 +61,9 @@ LIST OF TECHNOLOGIES USED:
 Written in Javascript with html and CSS file.  CSS file uses some flexbox.
 The javascript used was checked in documentation (ex. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) Chrome, Version 78.0.3904.87 (Official Build) (64-bit) on a Macbook Pro.
 
+VALIDATIONS:
+
+
 INSTALLATION INSTRUCTIONS / GETING STARTED
 This app was not designed with integration to other apps in mind. 
 Installation is simply open URL in browser and begin play with the pre-loaded deck.
