@@ -62,17 +62,12 @@ function nextCard(){
     let cardBack = document.querySelector("#cardBack");
     cardBack.innerText = ("");  
     if (counter === flashCards.length){
-        let msg = document.querySelector("#div4");
-        msg.innerText = ("That was the last new card in deck!" + '\r\n' + 
-        "Your FINAL score is  " + scoreCorrect + " correct out of " + cardsPlayed + " played." + '\r\n'
-        + '\r\n' + "Below are your review cards.  Press any key to review each"
-        );
         mainDeckFinished = true;
     }else {
         //display new promt and question
         let cardFront = document.querySelector("#cardFront");
         // counter = counter + 1;
-        console.log(flashCards, counter);
+        console.log("else ln75", flashCards, counter);
         cardFront.innerText = (flashCards[counter].prompt + '\r\n' + '\r\n' + flashCards[counter].quote);
         // counter = counter + 1;
     };
@@ -85,17 +80,40 @@ function nextCard(){
     };
 };     
 function review(){
-    let i = 0;
-    while (cardsToReview[0].prompt !== "EMPTY" && i < 100){
-        let front = document.querySelector("#cardFront"); 
-        console.log("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote); 
-        front.innerText = ("REVIEW " + '\r\n' + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
-        let cardBack = document.querySelector("#cardBack");
-        cardBack.innerText = ('\r\n' + "- " + cardsToReview[0].author);
-        i += 1;   //just in case
-    };
-    console.log("removeEventListener ln 91");
+    let cardFront = document.querySelector("#cardFront");
+    cardFront.innerText = "";
+    let msg = document.querySelector("#div4");
+    msg.innerText = ("That was the last new card in the deck!" + '\r\n' + 
+    "Your FINAL score is  " + scoreCorrect + " correct out of " + cardsPlayed + " played." + '\r\n'
+    + '\r\n' + "Next are your review cards.   You have " + (cardsToReview.length-1) + ".   Press any key to review below."
+    );
+    console.log("removeEventListener ln 102");
     document.removeEventListener('keydown', logKey); 
+    console.log(cardsToReview.length);
+    const cLength = cardsToReview.length;
+    console.log(cLength);  //have to do since method '.shift' will be changing length of array below
+    for (let i = 1; i < (cLength); i++){
+        document.addEventListener('keydown', function() {
+            let front = document.querySelector("#cardFront"); 
+            // console.log("Review " + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote); 
+            if (cardsToReview[0].prompt !== "EMPTY"){
+                front.innerText = ("*97-REVIEW " + '\r\n' + cardsToReview[0].prompt + '\r\n' + '\r\n' + cardsToReview[0].quote);
+                let cardBack = document.querySelector("#cardBack");
+                cardBack.innerText = ('\r\n' + "- " + cardsToReview[0].author);
+                cardsToReview.shift();
+            }else {
+                let msg = document.querySelector("#div4");
+                msg.innerText = ("That was the last card to review!" + '\r\n' + 
+                "Your FINAL score is  " + scoreCorrect + " correct out of " + cardsPlayed + " played."
+                 + '\r\n' + '\r\n' + "Refresh the browser to go through the deck again."
+                );
+                front.innerText = "";
+                cardBack.innerText = "";
+            }
+        });
+    };
+    // console.log("removeEventListener ln 102");
+    // document.removeEventListener('keydown', logKey); 
     //call finish()
 };
         //  display msg in <div> 4 on last card and how to reset.
