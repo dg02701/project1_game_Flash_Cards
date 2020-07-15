@@ -64,6 +64,24 @@ The javascript used was checked in documentation (ex. https://developer.mozilla.
 INSTALLATION INSTRUCTIONS / GETING STARTED
 This app was not designed with integration to other apps in mind. 
 Installation is simply open URL in browser and begin play with the pre-loaded deck.
-As of July 2020 the only way to load a new deck of flashcards in to change the elements of array flashCards in the Javascript.  Included is a text doc template that can be used to add new elements in the text and then copied into/over existing flashCards elements.  This limitation is listed as an unfulfilled User Story above.
+As of July 2020 the only way to load a new deck of flashcards in to change the elements of array flashCards in the Javascript.  Included is a text doc template (https://github.com/dg02701/project1_game_Flash_Cards/blob/master/Text_new_data_template) that can be used to add new elements in the text and then copied into/over existing flashCards elements.  This limitation is listed as an unfulfilled User Story above to do this without the Javascript skill needed now.
+
+TECHICAL NOTES:
+
+1.	Known Bugs:
+a.	Major:  If more than one wrong answer, the review at the end of play does not loop through all of them.
+b.	Major:  Error handling if players press keys out of sequence is not finished.  Function invalidKeyPressed is framed with logic of incorrect key strokes based on where the game play is at.  However, this is not complete, the function is never called (Jul 2020). 
+c.	Minor:  If there is no wrong answers, then game locks at the end-of-deck.
+d.	Minor: If there is a wrong answer at START of game (1st card), then count of cards to review never displays
+2.	Refactoring Needed (not exhaustive)
+a.	Change element names for array flashCards so they make more sense for non-quotes card decks
+            Current > Refactored
+	        prompt > promptOnFront
+	        quote > frontOf Card
+	        author > backOfCard
+
+b.	Used ‘counter’ too much.  Need to clean up.
+
+
 
 
