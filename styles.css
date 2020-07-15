@@ -10,6 +10,7 @@ body{
 header {
     text-align: center;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 50pt;
     background-color: darkgray;
     align-content: center;
@@ -57,7 +58,7 @@ header {
     justify-content: left;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25pt;
+    font-size: 35pt;
     font-weight: bold;
     /* background-color: aqua; */
     background-color: whitesmoke;
@@ -68,9 +69,10 @@ header {
     display: flex;
     justify-content: center;
     justify-self: center;
-    width: 50%;
     color: cornsilk;
     font-family: cursive;
-    font-size: 30pt;
+    font-size: 40pt;
     background-color: blue;
+    margin-left: 100pt;
+    margin-right: 100pt;
 }
