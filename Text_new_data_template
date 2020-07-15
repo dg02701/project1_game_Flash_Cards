@@ -1,0 +1,209 @@
+{
+	prompt:"Who said?",
+	front:"The way to get started is to quit talking and begin doing.",
+	back:"Walt Disney"
+},
+
+{
+	prompt:"Who said?",
+	front:"If life were predictable it would cease to be life, and be without flavor.",
+	back:"Eleanor Roosevelt"
+},
+
+{
+	prompt:"Who said?",
+	front:"Life is what happens when you're busy making other plans.",
+	back:"John Lennon"
+},
+
+{
+	prompt:"Who said?",
+	front:"When you reach the end of your rope, tie a knot in it and hang on.",
+	back:"Franklin D. Roosevelt"
+},
+
+{
+	prompt:"Who said?",
+	front:"Don't judge each day by the harvest you reap but by the seeds that you plant.",
+	back:"Robert Louis Stevenson"
+},
+
+{
+	prompt:"Who said?",
+	front:"Always remember that you are absolutely unique. Just like everyone else.",
+	back:"Margaret Mead"
+},
+
+{
+	prompt:"Who said?",
+	front:"The future belongs to those who believe in the beauty of their dreams.",
+	back:"Eleanor Roosevelt"
+},
+
+{
+	prompt:"Who said?",
+	front:"Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+	back:"Benjamin Franklin"
+},
+
+{
+	prompt:"Who said?",
+	front:"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+	back:"Helen Keller"
+},
+
+{
+	prompt:"Who said?",
+	front:"Whoever is happy will make others happy too.",
+	back:"Anne Frank"
+},
+
+{
+	prompt:"Who said?",
+	front:"Do not go where the path may lead, go instead where there is no path and leave a trail.",
+	back:"Ralph Waldo Emerson"
+},
+
+{
+	prompt:"Who said?",
+	front:"Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+	back:"Mother Teresa"
+},
+
+{
+	prompt:"Who said?",
+	front:"The greatest glory in living lies not in never falling, but in rising every time we fall.",
+	back:"Nelson Mandela"
+},
+
+{
+	prompt:"Who said?",
+	front:"In the end, it's not the years in your life that count. It's the life in your years.",
+	back:"Abraham Lincoln"
+},
+
+{
+	prompt:"Who said?",
+	front:"Never let the fear of striking out keep you from playing the game.",
+	back:"Babe Ruth"
+},
+
+{
+	prompt:"Who said?",
+	front:"Life is either a daring adventure or nothing at all.",
+	back:"Helen Keller"
+},
+
+{
+	prompt:"Who said?",
+	front:"Many of life's failures are people who did not realize how close they were to success when they gave up.",
+	back:"Thomas Alva Edison"
+},
+
+{
+	prompt:"Who said?",
+	front:"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+	back:"Dr. Seuss"
+},
+
+{
+	prompt:"Who said?",
+	front:"Only a life lived for others is a life worthwhile.",
+	back:"Albert Einstein"
+},
+
+{
+	prompt:"Who said?",
+	front:"You only live once, but if you do it right, once is enough.",
+	back:"Mae West"
+},
+
+{
+	prompt:"Who said?",
+	front:"May you live all the days of your life.",
+	back:"Jonathan Swift"
+},
+
+{
+	prompt:"Who said?",
+	front:"Life itself is the most wonderful fairy tale.",
+	back:"Hans Christian Andersen"
+},
+
+{
+	prompt:"Who said?",
+	front:"Do not let making a living prevent you from making a life.",
+	back:"John Wooden"
+},
+
+{
+	prompt:"Who said?",
+	front:"Love the life you live. Live the life you love.",
+	back:"Bob Marley"
+},
+
+{
+	prompt:"Who said?",
+	front:"I failed my way to success.",
+	back:"Thomas Edison"
+},
+
+{
+	prompt:"Who said?",
+	front:"The only place where success comes before work is in the dictionary.",
+	back:"Vidal Sassoon"
+},
+
+{
+	prompt:"Who said?",
+	front:"You miss 100% of the shots you don't take.",
+	back:"Wayne Gretzky"
+},
+
+{
+	prompt:"Who said?",
+	front:"Nothing is impossible, the word itself says, ‘I'm possible!'",
+	back:"Audrey Hepburn"
+},
+
+{
+	prompt:"Who said?",
+	front:"Believe you can and you're halfway there.",
+	back:"Theodore Roosevelt"
+},
+
+{
+	prompt:"Who said?",
+	front:"The question isn't who is going to let me; it's who is going to stop me.",
+	back:"Ayn Rand"
+},
+
+{
+	prompt:"Who said?",
+	front:"If you tell the truth, you don't have to remember anything.",
+	back:"Mark Twain"
+},
+
+{
+	prompt:"Who said?",
+	front:"Truth is like the sun. You can shut it out for a time, but it ain't goin' away.",
+	back:"Elvis Presley"
+},
+
+{
+	prompt:"Who said?",
+	front:"You can observe a lot by just watching.",
+	back:"Yogi Berra"
+},
+
+{
+	prompt:"Who said?",
+	front:"All that glitters is not gold.",
+	back:"William Shakespeare"
+},
+
+{
+	prompt:"Who said?"
+	front:"Let the one among you who is without sin be the first to cast a stone.",
+	back:"Jesus Christ"
+},

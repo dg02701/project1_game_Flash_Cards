@@ -46,14 +46,24 @@ COMPLETE @MVP - I want to be able to flip through the cards quickly (via keyboar
 COMPLETE @MVP - I want to be able to mark whether I got the card correct (via keyboard)
 COMPLETE @MVP - I want the app to track which cards were incorrect
 COMPLETE @MVP - I want the game to avoid various learning difference issues:  
- ex. font of arial for most of display and avoid Courier New or other set-width fonts (helps people with dyslexia ).
-ex. no continual flashing, blinking, movement (helps children with ADHD).
+    ex. font of arial for most of display and avoid Courier New or other set-width fonts (helps people with dyslexia ).
+    ex. no continual flashing, blinking, movement (helps children with ADHD).
 I want the incorrect cards re-displayed until I get the right! (Reviewing multiple review cards still has bug)
+I want to load a new deck of files via file.txt without altering Javascript or even knowing what Javascript is.
 
 USER INTERVIEWS/HANDS-ON DEMOS:
 Interviewed two homeschooling moms. Recieved feedback on keys selected for gameplay. KeyA to show the answer was preferred over KeyF (for 'Flip). This was even if graphics were to be put in to visually 'flip' the flashcards.
 
+VALIDATE UX/UI:
+Reviewed Mac, HP and 3rd part Windows keyboards to check if locations for the keys used in gameplay are primarily located as indicated and easily keyed.
+
 LIST OF TECHNOLOGIES USED:
 Written in Javascript with html and CSS file.  CSS file uses some flexbox.
+The javascript used was checked in documentation (ex. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) Chrome, Version 78.0.3904.87 (Official Build) (64-bit) on a Macbook Pro.
+
+INSTALLATION INSTRUCTIONS / GETING STARTED
+This app was not designed with integration to other apps in mind. 
+Installation is simply open URL in browser and begin play with the pre-loaded deck.
+As of July 2020 the only way to load a new deck of flashcards in to change the elements of array flashCards in the Javascript.  Included is a text doc template that can be used to add new elements in the text and then copied into/over existing flashCards elements.  This limitation is listed as an unfulfilled User Story above.
 
 
