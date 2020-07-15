@@ -12,9 +12,9 @@ const flashCards = [
         author:"Walt Disney"
     },
     {
-        prompt:"Who said?",
-        quote:"If life were predictable it would cease to be life, and be without flavor.",
-        author:"Eleanor Roosevelt"
+        prompt:"What is?",
+        quote:"3 + 4",
+        author:"7"
     },
     {
         prompt:"Who said?",
@@ -262,7 +262,7 @@ function review(){
 function showAnswer(){
     let cardBack = document.querySelector("#cardBack");
     // console.log("counter in showAnswer", counter);
-    cardBack.innerText = ('\r\n' + "- " + flashCards[counter].author);
+    cardBack.innerText = (flashCards[counter].author);
     cardsPlayed = counter + 1;
 };
 function selfScoreCorrect(){    //when KeyY is pressed as response to, "Was your answer correct?"
