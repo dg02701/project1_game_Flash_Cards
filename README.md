@@ -72,7 +72,7 @@ https://github.com/dg02701/project1_game_Flash_Cards/blob/master/CSS%20validatio
 
 INSTALLATION INSTRUCTIONS / GETING STARTED
 This app was not designed with integration to other apps in mind. 
-Installation is simply open URL in browser and begin play with the pre-loaded deck.
+Installation is simply open URL https://dg02701.github.io/project1_game_Flash_Cards/ in browser and begin play with the pre-loaded deck.
 As of July 2020 the only way to load a new deck of flashcards in to change the elements of array flashCards in the Javascript.  Included is a text doc template (https://github.com/dg02701/project1_game_Flash_Cards/blob/master/Text_new_data_template) that can be used to add new elements in the text and then copied into/over existing flashCards elements.  This limitation is listed as an unfulfilled User Story above to do this without the Javascript skill needed now.
 
 TECHICAL NOTES:
